@@ -6,7 +6,9 @@ export default function NewItem() {
     const [name, setName] = useState("")
     const [category, setCategory] = useState("produce")
 
-    function increment() {
+    function increment(e) {
+        e.preventDefault()
+        
         if (quantity >= 20) {
             return
         }
@@ -14,7 +16,9 @@ export default function NewItem() {
         setQuantity(quantity + 1)
     }
 
-    function decrement() {
+    function decrement(e) {
+        e.preventDefault()
+        
         if (quantity <= 1) {
             return
         }
